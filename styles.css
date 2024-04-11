@@ -1,0 +1,52 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#roulette-container {
+  position: relative;
+  width: 300px; /* スマートフォン用のサイズに合わせる */
+  height: 300px;
+}
+
+#roulette {
+  width: 100%;
+  height: 100%;
+  border: 5px solid #333;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+#arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 12.5px solid transparent; /* 以前の設定の半分 */
+  border-right: 12.5px solid transparent; /* 以前の設定の半分 */
+  border-top: 37.5px solid yellow; /* 以前の設定の半分、三角形を横にする */
+  /* ルーレットのサイズ内に納めるための位置調整 */
+  right: 50%; /* コンテナの中心から右へ */
+  top: 50%; /* コンテナの中心から上へ */
+  transform: translate(50%, -50%) translateX(135px) rotate(90deg); /* 位置と向きの調整 */
+  z-index: 100; /* 三角形が一番上に表示されるように */
+}
+
+
+#spin-button {
+  display: block;
+  margin: 20px auto;
+  background-color: grey;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
